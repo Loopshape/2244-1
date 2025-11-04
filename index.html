@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nemodian 2244-1 :: Quantum Fractal AI Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --theme-bg: #1e1e1e;
+        --panel-bg: #252526;
+        --header-bg: #333333;
+        --status-bg: #007acc;
+        --accent: #4ac94a;
+        --muted-text: #999966;
+        --agent-nexus: #BB86FC;
+        --agent-cognito: #03DAC6;
+        --agent-relay: #FFD54F;
+        --agent-sentinel: #CF6679;
+        --agent-echo: #4ac94a;
+        --quantum-glow: rgba(187, 134, 252, 0.6);
+      }
+      body {
+        font-family: 'Fira Code', monospace;
+        background-color: var(--theme-bg);
+        color: #f0f0e0;
+      }
+      .editor-content::selection {
+        background: rgba(74, 201, 74, 0.3);
+      }
+      .editor-container::-webkit-scrollbar {
+        width: 12px;
+      }
+      .editor-container::-webkit-scrollbar-track {
+        background: var(--panel-bg);
+      }
+      .editor-container::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 6px;
+        border: 3px solid var(--panel-bg);
+      }
+      .editor-container::-webkit-scrollbar-thumb:hover {
+        background: var(--accent);
+      }
+      .sh-comment { color: #64748b; font-style: italic; }
+      .sh-string { color: #a3e635; }
+      .sh-number { color: #f59e0b; }
+      .sh-keyword { color: #f472b6; font-weight: 600; }
+      .sh-function { color: #4ac94a; }
+      .sh-tag { color: #f472b6; font-weight: 600; }
+      .sh-property { color: #7dd3fc; }
+      .sh-op { color: #94a3b8; }
+      .sh-bracket { color: #c084fc; font-weight: 700; }
+      .sh-id { color: #94a3b8; }
+      .sh-text { color: #e2e8f0; }
+      .sh-unknown { color: #f87171; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
